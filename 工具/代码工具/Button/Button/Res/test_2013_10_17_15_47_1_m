@@ -1,0 +1,83 @@
+ 
+#import "test.h"
+@implementation test
+- (id)initWithFrame:(CGRect)frame
+{
+ self = [super initWithFrame:frame];
+ if (self) {
+ //
+ }
+	if(m_CustomToolBar == nil)
+	{
+		m_CustomToolBar = [[CustomToolBar alloc] init];
+		m_CustomToolBar.customToolBarDelegate = self;
+ 		[m_CustomToolBar setButtonImage:TOP_LEFT : :];
+		[m_CustomToolBar setButtonImage:TOP_RIGHT : :]; 
+ }
+	if(m_CustomToolBar == nil)
+	{
+		m_CustomToolBar = [[CustomToolBar alloc] init];
+		m_CustomToolBar.customToolBarDelegate = self;
+ 		[m_CustomToolBar setButtonImage:TOP_LEFT : :];
+		[m_CustomToolBar setButtonImage:TOP_RIGHT : :]; 
+ }
+	if(m_CustomToolBar == nil)
+	{
+		m_CustomToolBar = [[CustomToolBar alloc] init];
+		m_CustomToolBar.customToolBarDelegate = self;
+ 		[m_CustomToolBar setButtonImage:TOP_LEFT : :];
+		[m_CustomToolBar setButtonImage:TOP_RIGHT : :]; 
+ }
+	if(m_CustomToolBar == nil)
+	{
+		m_CustomToolBar = [[CustomToolBar alloc] init];
+		m_CustomToolBar.customToolBarDelegate = self;
+ 		[m_CustomToolBar setButtonImage:TOP_LEFT : :];
+		[m_CustomToolBar setButtonImage:TOP_RIGHT : :]; 
+ }
+	if(m_CustomToolBar == nil)
+	{
+		m_CustomToolBar = [[CustomToolBar alloc] init];
+		m_CustomToolBar.customToolBarDelegate = self;
+ 		[m_CustomToolBar setButtonImage:TOP_LEFT : :];
+		[m_CustomToolBar setButtonImage:TOP_RIGHT : :]; 
+ }
+return self;
+}
+/*
+- (void)drawRect:(CGRect)rect
+{
+ //
+}
+*/
+ - (void)toggleTopLeft_Delegate:(CustomToolBar *)toolBar
+{
+}
+ - (void)toggleTopRight_Delegate:(CustomToolBar *)toolBar
+{
+}
+ - (void)toggleTopLeft_Delegate:(CustomToolBar *)toolBar
+{
+}
+ - (void)toggleTopRight_Delegate:(CustomToolBar *)toolBar
+{
+}
+ - (void)toggleTopLeft_Delegate:(CustomToolBar *)toolBar
+{
+}
+ - (void)toggleTopRight_Delegate:(CustomToolBar *)toolBar
+{
+}
+ - (void)toggleTopLeft_Delegate:(CustomToolBar *)toolBar
+{
+}
+ - (void)toggleTopRight_Delegate:(CustomToolBar *)toolBar
+{
+}
+ - (void)toggleTopLeft_Delegate:(CustomToolBar *)toolBar
+{
+}
+ - (void)toggleTopRight_Delegate:(CustomToolBar *)toolBar
+{
+}
+@end

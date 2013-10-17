@@ -1,0 +1,32 @@
+ 
+#import "CustomToolBar.h"
+#import "CustomToolBar.h"
+#import "CustomToolBar.h"
+#import "CustomToolBar.h"
+#import "CustomToolBar.h"
+#import <UIKit/UIKit.h>
+@class CustomToolBar;
+@class CustomToolBar;
+@class CustomToolBar;
+@class CustomToolBar;
+@class CustomToolBar;
+@interface test : UIView
+<
+CustomToolBarDelegate
+,
+CustomToolBarDelegate
+,
+CustomToolBarDelegate
+,
+CustomToolBarDelegate
+,
+CustomToolBarDelegate
+>
+{
+	CustomToolBar *m_CustomToolBar;
+	CustomToolBar *m_CustomToolBar;
+	CustomToolBar *m_CustomToolBar;
+	CustomToolBar *m_CustomToolBar;
+	CustomToolBar *m_CustomToolBar;
+}
+@end
