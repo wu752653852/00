@@ -1,11 +1,4 @@
-//
-//  GetHeader.m
-//  Button
-//
-//  Created by apple on 13-10-16.
-//  Copyright (c) 2013年 manboker. All rights reserved.
-//
-
+ 
 #import "GetHeader.h"
 #import "MString.h"
 #import "MDebugUtils.h"
@@ -19,14 +12,11 @@
 	}
 	return self;
 }
-
-
 - (NSString *)GetH
 {
 	[self AddHFile];
 	return ToHFile;
 }
-
 - (void)AddHFile
 {
 	[self AddHeader];
@@ -34,16 +24,11 @@
 	[self AddDelegate];
 	[self AddFunc];
 }
-
 - (NSInteger)GetHeaderPos
 {
-//	return 0;
 	NSInteger a = [MString GetBeforeKeyNum:ToHFile :@"#import"];
-    return a;
+ return a;
 }
-
-
-
 - (void)AddHeader
 {
 	NSString *header = [MString GetStringFrom:file :@"~header" :@"~before_func"];
@@ -51,10 +36,9 @@
 	NSInteger ina = [self GetHeaderPos];
 	[ToHFile insertString:header atIndex:ina];
 }
-
 -(NSInteger)GetAddHeaderFuncPos
 {
-    NSInteger a1 = [MString GetBeforeKeyNum:ToHFile :@"@interface"];
+ NSInteger a1 = [MString GetBeforeKeyNum:ToHFile :@"@interface"];
 	NSInteger b1 = [MString GetBeforeKeyNum:ToHFile :@"@protocol"];
 	TEST_NSLog(@"%d", (int)a1);
 	TEST_NSLog(@"%d", (int)b1);
@@ -76,7 +60,6 @@
 		return a1;
 	}
 }
-
 - (void)AddHeaderFunc
 {
 	NSString *header = [MString GetStringFrom:file :@"~before_func" :@"~func_delegate"];
@@ -86,21 +69,14 @@
 	TEST_NSLog(@"%d", (int)ina);
 	TEST_NSLog(@"%d", (int)[ToHFile length]);
 	[ToHFile insertString:header atIndex:ina];
-
 }
-
-
-
-
 - (void)AddDelegate
 {
 	NSString *header = [MString GetStringFrom:file :@"~func_delegate" :@"~in_func"];
-
 	
-	header =  [MString RemoveEndString:header :@" "];
-	header =  [MString RemoveEndString:header :@"\n"];
+	header = [MString RemoveEndString:header :@" "];
+	header = [MString RemoveEndString:header :@"\n"];
 	header = [@"\n" stringByAppendingString:header];
-
  		
  	TEST_NSLog(@"%@", ToHFile);
 	NSString *str = [MString GetStringFrom:ToHFile :@"@interface" :@"@end"];
@@ -109,10 +85,8 @@
 	NSInteger in2 ;
 	if(str3 != nil)
 	{
-	    in2 = [MString GetInCludeBeforKeyNum:ToHFile :str3];
+	 in2 = [MString GetInCludeBeforKeyNum:ToHFile :str3];
 		header = [@",\n" stringByAppendingString:header];
-
-
  		[ToHFile insertString:header atIndex:in2];
 	}
 	else
@@ -137,13 +111,9 @@
 		}
 	}
 }
-
-
-
 - (void)AddFunc
 {
 	NSString *header = [MString GetStringFrom:file :@"~in_func" :@"~.m"];
-//	NSInteger ina = [self GetAddFuncPos];
 	
 	NSString *str = [MString GetStringFrom:ToHFile :@"@interface" :@"@end"];
 	NSString *str3 = [MString GetStringFrom:str :@"{" :@"}"];
@@ -151,20 +121,18 @@
 	
 	if(str3 != nil)
 	{
-	    in2 = [MString GetInCludeBeforKeyNum:ToHFile :str3];
+	 in2 = [MString GetInCludeBeforKeyNum:ToHFile :str3];
 		header = [@"\n" stringByAppendingString:header];
 		[ToHFile insertString:header atIndex:in2];
-
 	}
 	else
 	{
 		NSString *str4 = [MString GetStringFrom:str :@">" :@"@end"];
 		if(str4 != nil)
 		{
-	    	in2 = [MString GetInCludeBeforKeyNum:ToHFile :str4];
+	 	in2 = [MString GetInCludeBeforKeyNum:ToHFile :str4];
 			header = [@"\n{\n" stringByAppendingFormat:@"%@\n}\n" ,header];
 			[ToHFile insertString:header atIndex:in2];
-
 		}
 		else
 		{
@@ -181,11 +149,4 @@
 	}
 	
 }
-
-
-
-
-
-
-
 @end

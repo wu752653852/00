@@ -1,17 +1,8 @@
-//
-//  GetMFile.m
-//  Button
-//
-//  Created by apple on 13-10-16.
-//  Copyright (c) 2013年 manboker. All rights reserved.
-//
-
+ 
 #import "GetMFile.h"
 #import "MString.h"
 #import "MDebugUtils.h"
 @implementation GetMFile
-
-
 - (id)init:(NSString *)str :(NSString *)str1
 {
 	if(self = [super init])
@@ -21,25 +12,16 @@
 	}
 	return self;
 }
-
-
 - (NSString *)GetM
 {
 	[self AddMFile];
  	return ToMFile;
 }
-
-
-
 - (void)AddMFile
 {
 	[self AddViewDidLoad];
 	[self AddFunc];
 }
-
-
-
-
 - (void)AddViewDidLoad
 {
 	NSString *header = [MString GetStringFrom:file :@"~viewdidload" :@"~delegate"];
@@ -49,7 +31,6 @@
 	{
 		NSInteger in2 = [MString GetInCludeBeforKeyNum:ToMFile :str];
 		header = [@"\n" stringByAppendingString:header];
-
 		[ToMFile insertString:header atIndex:in2];
 	}
 	else
@@ -61,21 +42,17 @@
 		{
 			NSInteger in2 = [MString GetInCludeBeforKeyNum:ToMFile :str2];
 			header = [@"\n" stringByAppendingString:header];
-
 			[ToMFile insertString:header atIndex:in2];
 		}
 	}
 	TEST_NSLog(@"%@", ToMFile);
 }
-
 - (NSInteger)GetFuncPos
 {
 	NSString *str = [MString GetStringFrom:ToMFile :@"@implementation" :@"@end"];
-
-   	NSInteger in2 = [MString GetInCludeBeforKeyNum:ToMFile :str];
+ 	NSInteger in2 = [MString GetInCludeBeforKeyNum:ToMFile :str];
 	return in2;
 }
-
 - (void)AddFunc
 {
 	NSString *header = [MString GetStringFrom:file :@"~delegate" :@"~end"];
@@ -83,8 +60,4 @@
 	NSInteger ina = [self GetFuncPos];
 	[ToMFile insertString:header atIndex:ina];
 }
-
-
-
-
 @end

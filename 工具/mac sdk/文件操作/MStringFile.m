@@ -7,6 +7,7 @@
 //
 
 #import "MStringFile.h"
+#import "MString.h"
 //#import "GDataXMLDocument"
 //#import "GDataXMLNode.h"
 
@@ -248,6 +249,7 @@
 	for (NSString *tString in dirContents)
 	{
 		if([tString hasSuffix:@"_h"] || [tString hasSuffix:@"_m"])
+			if([MString StringHaveString:tString :str3])
  			if(![tString isEqualToString:hPath] && ![tString isEqualToString:mPath])
 			{
        	        NSString *hPath1 = [str1 stringByAppendingString:tString];
@@ -417,6 +419,7 @@
 	for (NSString *tString in dirContents)
 	{
 		if([tString hasSuffix:@"_h"] || [tString hasSuffix:@"_m"])
+			if([MString StringHaveString:tString :str3])
  			if(![tString isEqualToString:hPath] && ![tString isEqualToString:mPath])
 			{
        	        NSString *hPath1 = [str1 stringByAppendingString:tString];

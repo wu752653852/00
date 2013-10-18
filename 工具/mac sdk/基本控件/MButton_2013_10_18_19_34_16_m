@@ -1,11 +1,20 @@
- 
+//
+//  Button.m
+//  Button
+//
+//  Created by apple on 13-10-17.
+//  Copyright (c) 2013年 manboker. All rights reserved.
+//
+
 #import "MButton.h"
+
 @implementation MButton
 + (NSButton*)GetStringButton:(NSString *)title :(NSPoint)center :(SEL)fun :(id)father
 {
-	NSButton *button = [[NSButton alloc] init];
+	NSButton *button  = [[NSButton alloc] init];
 	button.title = title;
 	[button sizeToFit];
+
 	NSRect rect = CGRectMake(center.x - button.frame.size.width / 2, 480 - center.y - button.frame.size.height / 2, button.frame.size.width, button.frame.size.height);
 	[button setFrame:rect];
 	
@@ -13,5 +22,7 @@
 	[button setAction:fun];
  	
 	return button;
+
 }
+
 @end

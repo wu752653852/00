@@ -63,13 +63,13 @@
 	for(int i = 0;i < [arr count];i ++)
 	{
 		NSString *a = [arr objectAtIndex:i];
-		NSArray *b = [a componentsSeparatedByString:@"//
+		NSArray *b = [a componentsSeparatedByString:@"//"];
 		if([b count] > 1)
 		{
 			NSString *c = [b lastObject];
 			NSArray *d = [a componentsSeparatedByString:c];
  				NSString *e = [d objectAtIndex:0];
-				if(![e isEqualToString:@""] && ![e isEqualToString:@"//
+				if(![e isEqualToString:@""] && ![e isEqualToString:@"//"])
 				{
 					ToHFile = [ToHFile stringByAppendingFormat:@"\n%@",e];
 				}
