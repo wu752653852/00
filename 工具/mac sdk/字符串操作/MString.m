@@ -94,12 +94,42 @@
 	return returnvalue;
 }
 
++ (bool)StringEndWithString:(NSString *)str :(NSString *)end
+{
+	const char *char_content = [str cStringUsingEncoding:NSUTF8StringEncoding];
+	const char *cc = [end cStringUsingEncoding:NSUTF8StringEncoding];
+	int ca = [MString getCharLen:cc];
+	bool returnvalue = true;
+	int cb = [MString getCharLen:char_content];
+
+	for(int i = 0;i < ca;i ++)
+	{
+		if(cc[i] != char_content[cb - 1 - i])
+		{
+			returnvalue = false;
+		}
+	}
+	return returnvalue;
+}
+
+
++ (NSString *)RemoveEndString:(NSString *)str :(NSString *)remove
+{
+	if([MString StringEndWithString:str :remove])
+	{
+ 	   str = [str substringToIndex:[str length] - [remove length]];
+	}
+	
+	return str;
+}
+
+
+
 + (int)getCharLen:(const char *)a
 {
 	int i = 0;
 	do{
-//		a[]
-		i ++;
+ 		i ++;
 	}while (a[i] == '\0');
 	return i - 1;
 }
@@ -111,6 +141,25 @@
 	
 	return [str112 stringByAppendingString:file];
 }
+
++ (bool)StringBeginWithString:(NSString *)str :(NSString *)begin
+{
+	const char *char_content = [str cStringUsingEncoding:NSUTF8StringEncoding];
+	const char *cc = [begin cStringUsingEncoding:NSUTF8StringEncoding];
+	int ca = [MString getCharLen:cc];
+	bool returnvalue = true;
+	for(int i = 0;i < ca;i ++)
+	{
+		if(cc[i] != char_content[i])
+		{
+			returnvalue = false;
+		}
+	}
+	return returnvalue;
+}
+
+
+
 
 
 @end

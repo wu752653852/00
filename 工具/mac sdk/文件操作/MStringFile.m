@@ -103,6 +103,7 @@
 
 + (bool)SaveFileWithTimeAdd:(NSString *)path :(NSString *)addStr
 {
+	
 	NSString *path1 = [path lastPathComponent];
 //	TEST_NSLog(@"%@", hPath);
 	NSArray *array = [path1 componentsSeparatedByString:@"."];
@@ -123,8 +124,7 @@
 	NSInteger second = [components second];
 	/////////////////////////////////////////////
 	////////////////////////////
-	//	TEST_TEST_NSLog(@"%@", str);
-	
+ 	
 	NSString *str = [NSString stringWithFormat:@"_%d_%d_%d_%d_%d_%d_%@", (int)year, (int)month, (int)day,(int)hour, (int)minute,(int)second ,addStr];
 	path1 = [fen2 stringByAppendingString:str];
 	TEST_NSLog(@"%@", path1);
@@ -177,114 +177,97 @@
 	for(int i = 0;i < [hArr count];i ++)
 	{
 		NSArray *arr  =[hArr objectAtIndex:i];
-        if([[arr objectAtIndex:2] integerValue] > BigMonth)
+        if([[arr objectAtIndex:2] integerValue] > BigMonth && [[arr objectAtIndex:1] integerValue] == BigYear)
 		{
 			BigMonth = [[arr objectAtIndex:2] integerValue];
 		}
 	}
 	
-	for(int i = 0;i < [hArr count];i ++)
-	{
-			NSArray *arr  =[hArr objectAtIndex:i];
-			if([[arr objectAtIndex:2] integerValue] != BigMonth)
-			{
-				[hArr removeObject:arr];
-			}
-	}
+ 
     ////////////////////////
 	NSInteger BigDay = 0;
 	for(int i = 0;i < [hArr count];i ++)
 	{
 		NSArray *arr  =[hArr objectAtIndex:i];
-        if([[arr objectAtIndex:3] integerValue] > BigDay)
+        if([[arr objectAtIndex:3] integerValue] > BigDay && ([[arr objectAtIndex:2] integerValue] == BigMonth  && [[arr objectAtIndex:1] integerValue] == BigYear))
 		{
 			BigDay = [[arr objectAtIndex:3] integerValue];
 		}
 	}
 	
-	for(int i = 0;i < [hArr count];i ++)
-	{
-		NSArray *arr  =[hArr objectAtIndex:i];
-		if([[arr objectAtIndex:3] integerValue] != BigDay)
-		{
-			[hArr removeObject:arr];
-		}
-	}
+ 
 	///////////////////////
 	NSInteger BigHour = 0;
 	for(int i = 0;i < [hArr count];i ++)
 	{
 		NSArray *arr  =[hArr objectAtIndex:i];
-        if([[arr objectAtIndex:4] integerValue] > BigHour)
+        if([[arr objectAtIndex:4] integerValue] > BigHour && ([[arr objectAtIndex:2] integerValue] == BigMonth  && [[arr objectAtIndex:1] integerValue] == BigYear && [[arr objectAtIndex:3] integerValue] == BigDay))
 		{
 			BigHour = [[arr objectAtIndex:4] integerValue];
 		}
 	}
 	
-	for(int i = 0;i < [hArr count];i ++)
-	{
-		NSArray *arr  =[hArr objectAtIndex:i];
-		if([[arr objectAtIndex:4] integerValue] != BigHour)
-		{
-			[hArr removeObject:arr];
-		}
-	}
+ 
 	///////////////////////
 	NSInteger BigMinute = 0;
 	for(int i = 0;i < [hArr count];i ++)
 	{
 		NSArray *arr  =[hArr objectAtIndex:i];
-        if([[arr objectAtIndex:5] integerValue] > BigMinute)
+        if([[arr objectAtIndex:5] integerValue] > BigMinute && ([[arr objectAtIndex:2] integerValue] == BigMonth  && [[arr objectAtIndex:1] integerValue] == BigYear && [[arr objectAtIndex:3] integerValue] == BigDay && [[arr objectAtIndex:4] integerValue] == BigHour))
 		{
 			BigMinute = [[arr objectAtIndex:5] integerValue];
 		}
 	}
 	
-	for(int i = 0;i < [hArr count];i ++)
-	{
-		NSArray *arr  =[hArr objectAtIndex:i];
-		if([[arr objectAtIndex:5] integerValue] != BigMinute)
-		{
-			[hArr removeObject:arr];
-		}
-	}
+ 
 	//////////////////////////
 	NSInteger BigSecond = 0;
 	for(int i = 0;i < [hArr count];i ++)
 	{
 		NSArray *arr  =[hArr objectAtIndex:i];
-        if([[arr objectAtIndex:6] integerValue] > BigSecond)
+        if([[arr objectAtIndex:6] integerValue] > BigSecond && ([[arr objectAtIndex:2] integerValue] == BigMonth  && [[arr objectAtIndex:1] integerValue] == BigYear && [[arr objectAtIndex:3] integerValue] == BigDay && [[arr objectAtIndex:4] integerValue] == BigHour && [[arr objectAtIndex:5] integerValue] == BigMinute))
 		{
 			BigSecond = [[arr objectAtIndex:6] integerValue];
 		}
 	}
 	
-	for(int i = 0;i < [hArr count];i ++)
-	{
-		NSArray *arr  =[hArr objectAtIndex:i];
-		if([[arr objectAtIndex:6] integerValue] != BigSecond)
-		{
-			[hArr removeObject:arr];
-		}
-	}
+
+ 
 	
 	
-    NSString *hPath = [NSString stringWithFormat:@"%d_%d_%d_%d_%d_%d_h",(int)BigYear, (int)BigMonth, (int)BigDay, (int)BigHour, (int)BigMinute, (int)BigSecond];
+    NSString *hPath = [NSString stringWithFormat:@"%@_%d_%d_%d_%d_%d_%d_h",str3, (int)BigYear, (int)BigMonth, (int)BigDay, (int)BigHour, (int)BigMinute, (int)BigSecond];
 	TEST_NSLog(@"%@", hPath);
-	NSString *mPath = [NSString stringWithFormat:@"%d_%d_%d_%d_%d_%d_m",  (int)BigYear, (int)BigMonth, (int)BigDay, (int)BigHour, (int)BigMinute, (int)BigSecond];
+	NSString *mPath = [NSString stringWithFormat:@"%@_%d_%d_%d_%d_%d_%d_m", str3, (int)BigYear, (int)BigMonth, (int)BigDay, (int)BigHour, (int)BigMinute, (int)BigSecond];
     TEST_NSLog(@"%@", str1);
-	NSString *h1  = [str1 stringByAppendingFormat:@"%@_", str3];
+ NSString *h1  = [str1 stringByAppendingString:hPath];
 	    TEST_NSLog(@"%@", h1);
-		NSString *m1= [str1 stringByAppendingFormat:@"%@_", str3];
-	NSString *hPath1 = [h1 stringByAppendingString:hPath];
-	NSString *mPath1 = [m1 stringByAppendingString:mPath];
-	NSString *tohpath = [str1 stringByAppendingFormat:@"%@.h",str3];
-	NSString *tompath = [str1 stringByAppendingFormat:@"%@.m",str3];
-	TEST_NSLog(@"%@,%@, %@",str1,str3, hPath1);
+ NSString *m1= [str1 stringByAppendingString:mPath];
 	
 	NSFileManager *f = [NSFileManager defaultManager];
+
+	for (NSString *tString in dirContents)
+	{
+		if([tString hasSuffix:@"_h"] || [tString hasSuffix:@"_m"])
+ 			if(![tString isEqualToString:hPath] && ![tString isEqualToString:mPath])
+			{
+       	        NSString *hPath1 = [str1 stringByAppendingString:tString];
+				NSLog(@"%@", hPath1);
+				if([f fileExistsAtPath:hPath1])
+				{
+					[f removeItemAtPath:hPath1 error:nil];
+				}
+			}
+	}
+
+	
+//	NSString *hPath1 = [h1 stringByAppendingString:hPath];
+//	NSString *mPath1 = [m1 stringByAppendingString:mPath];
+	NSString *tohpath = [str1 stringByAppendingFormat:@"%@.h",str3];
+	NSString *tompath = [str1 stringByAppendingFormat:@"%@.m",str3];
+	TEST_NSLog(@"%@,%@, %@",tohpath,str3, h1);
+	
 //	  [f removeITem\:hPath toPath:tohpath error:nil];
-	if([f fileExistsAtPath:hPath1] && [f fileExistsAtPath:mPath1])
+	if([f fileExistsAtPath:h1] && [f fileExistsAtPath:m1])
 	{
 		bool result1 = [MStringFile SaveFileWithTimeAdd:tohpath :@"h"];
 		bool result2 = [MStringFile SaveFileWithTimeAdd:tompath :@"m"];
@@ -294,8 +277,8 @@
 			[f removeItemAtPath:tompath error:nil];
 
 		
-			[f moveItemAtPath:hPath1 toPath:tohpath error:nil];
-			[f moveItemAtPath:mPath1 toPath:tompath error:nil];
+			[f moveItemAtPath:h1 toPath:tohpath error:nil];
+			[f moveItemAtPath:m1 toPath:tompath error:nil];
 		}
 	}
 }
@@ -317,6 +300,134 @@
 		}
 	}
 	return arr2;
+}
+
++ (void)removeNotNewAtPath:(NSString *)path
+{
+ 	NSString *str = [path lastPathComponent];
+	NSArray *b = [str componentsSeparatedByString:@"."];
+	NSString *str3 = [b objectAtIndex:0];
+	NSArray *a = [path componentsSeparatedByString:str];
+	NSString *str1 = [a objectAtIndex:0];
+	NSArray *dirContents = [[NSFileManager defaultManager]
+							contentsOfDirectoryAtPath:str1 error:nil];
+	NSMutableArray *hArr = [[NSMutableArray alloc] init];
+	
+	for (NSString *tString in dirContents)
+	{
+		if([tString hasSuffix:@"_h"])
+		{
+		   	NSArray *array = [tString componentsSeparatedByString:@"_"];
+			[hArr addObject:array];
+		}
+	}
+	TEST_NSLog(@"%@", hArr);
+	
+	NSInteger BigYear = 0;
+	for(int i = 0;i < [hArr count];i ++)
+	{
+		NSArray *arr  =[hArr objectAtIndex:i];
+        if([[arr objectAtIndex:1] integerValue] > BigYear)
+		{
+			BigYear = [[arr objectAtIndex:1] integerValue];
+		}
+	}
+	
+	for(int i = 0;i < [hArr count];i ++)
+	{
+		NSArray *arr  =[hArr objectAtIndex:i];
+		if([[arr objectAtIndex:1] integerValue] != BigYear)
+		{
+			[hArr removeObject:arr];
+		}
+	}
+	///////////////
+	NSInteger BigMonth = 0;
+	for(int i = 0;i < [hArr count];i ++)
+	{
+		NSArray *arr  =[hArr objectAtIndex:i];
+        if([[arr objectAtIndex:2] integerValue] > BigMonth && [[arr objectAtIndex:1] integerValue] == BigYear)
+		{
+			BigMonth = [[arr objectAtIndex:2] integerValue];
+		}
+	}
+	
+	
+    ////////////////////////
+	NSInteger BigDay = 0;
+	for(int i = 0;i < [hArr count];i ++)
+	{
+		NSArray *arr  =[hArr objectAtIndex:i];
+        if([[arr objectAtIndex:3] integerValue] > BigDay && ([[arr objectAtIndex:2] integerValue] == BigMonth  && [[arr objectAtIndex:1] integerValue] == BigYear))
+		{
+			BigDay = [[arr objectAtIndex:3] integerValue];
+		}
+	}
+	
+	
+	///////////////////////
+	NSInteger BigHour = 0;
+	for(int i = 0;i < [hArr count];i ++)
+	{
+		NSArray *arr  =[hArr objectAtIndex:i];
+        if([[arr objectAtIndex:4] integerValue] > BigHour && ([[arr objectAtIndex:2] integerValue] == BigMonth  && [[arr objectAtIndex:1] integerValue] == BigYear && [[arr objectAtIndex:3] integerValue] == BigDay))
+		{
+			BigHour = [[arr objectAtIndex:4] integerValue];
+		}
+	}
+	
+	
+	///////////////////////
+	NSInteger BigMinute = 0;
+	for(int i = 0;i < [hArr count];i ++)
+	{
+		NSArray *arr  =[hArr objectAtIndex:i];
+        if([[arr objectAtIndex:5] integerValue] > BigMinute && ([[arr objectAtIndex:2] integerValue] == BigMonth  && [[arr objectAtIndex:1] integerValue] == BigYear && [[arr objectAtIndex:3] integerValue] == BigDay && [[arr objectAtIndex:4] integerValue] == BigHour))
+		{
+			BigMinute = [[arr objectAtIndex:5] integerValue];
+		}
+	}
+	
+	
+	//////////////////////////
+	NSInteger BigSecond = 0;
+	for(int i = 0;i < [hArr count];i ++)
+	{
+		NSArray *arr  =[hArr objectAtIndex:i];
+        if([[arr objectAtIndex:6] integerValue] > BigSecond && ([[arr objectAtIndex:2] integerValue] == BigMonth  && [[arr objectAtIndex:1] integerValue] == BigYear && [[arr objectAtIndex:3] integerValue] == BigDay && [[arr objectAtIndex:4] integerValue] == BigHour && [[arr objectAtIndex:5] integerValue] == BigMinute))
+		{
+			BigSecond = [[arr objectAtIndex:6] integerValue];
+		}
+	}
+	
+	
+	
+	
+	
+    NSString *hPath = [NSString stringWithFormat:@"%@_%d_%d_%d_%d_%d_%d_h",str3, (int)BigYear, (int)BigMonth, (int)BigDay, (int)BigHour, (int)BigMinute, (int)BigSecond];
+	TEST_NSLog(@"%@", hPath);
+	NSString *mPath = [NSString stringWithFormat:@"%@_%d_%d_%d_%d_%d_%d_m", str3, (int)BigYear, (int)BigMonth, (int)BigDay, (int)BigHour, (int)BigMinute, (int)BigSecond];
+    TEST_NSLog(@"%@", str1);
+//	NSString *h1  = [str1 stringByAppendingString:hPath];
+//	TEST_NSLog(@"%@", h1);
+//	NSString *m1= [str1 stringByAppendingString:mPath];
+	
+	NSFileManager *f = [NSFileManager defaultManager];
+	
+	for (NSString *tString in dirContents)
+	{
+		if([tString hasSuffix:@"_h"] || [tString hasSuffix:@"_m"])
+ 			if(![tString isEqualToString:hPath] && ![tString isEqualToString:mPath])
+			{
+       	        NSString *hPath1 = [str1 stringByAppendingString:tString];
+				NSLog(@"%@", hPath1);
+				if([f fileExistsAtPath:hPath1])
+				{
+					[f removeItemAtPath:hPath1 error:nil];
+				}
+			}
+	}
+	
 }
 
 

@@ -54,6 +54,8 @@
 	[self Zhengli];
 	bool result1 = [MStringFile SaveFileWithTimeAdd:hPath :@"h"];
 	bool result2 = [MStringFile SaveFileWithTimeAdd:mPath :@"m"];
+	[MStringFile removeNotNewAtPath:hPath];
+
 	if(result1 && result2)
 	{
  		[MStringFile SaveStringToDir:ToHFile to:hPath];

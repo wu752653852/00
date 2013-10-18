@@ -34,8 +34,12 @@
 {
 	ToHFile = [MStringFile GetStringFromDir:hPath];
 	ToMFile = [MStringFile GetStringFromDir:mPath];
+
+	
 	[MStringFile SaveFileWithTimeAdd:hPath :@"h"];
 	[MStringFile SaveFileWithTimeAdd:mPath :@"m"];
+	[MStringFile removeNotNewAtPath:hPath];
+
 //    TEST_NSLog(@"%@", ToHFile);
 	
 	///////////////////////////////////////////////////////////////////////

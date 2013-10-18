@@ -28,6 +28,7 @@
 
 + (NSMutableArray *)getFileListAtPathWithHouZhui:(NSString *)houzhui :(NSString *)dir;
 
++ (void)removeNotNewAtPath:(NSString *)path;
 
 
 

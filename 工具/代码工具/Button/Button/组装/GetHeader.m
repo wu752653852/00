@@ -95,8 +95,14 @@
 - (void)AddDelegate
 {
 	NSString *header = [MString GetStringFrom:file :@"~func_delegate" :@"~in_func"];
-//	TEST_NSLog()
-	TEST_NSLog(@"%@", ToHFile);
+
+	
+	header =  [MString RemoveEndString:header :@" "];
+	header =  [MString RemoveEndString:header :@"\n"];
+	header = [@"\n" stringByAppendingString:header];
+
+ 		
+ 	TEST_NSLog(@"%@", ToHFile);
 	NSString *str = [MString GetStringFrom:ToHFile :@"@interface" :@"@end"];
  	
 	NSString *str3 = [MString GetStringFrom:str :@"<" :@">"];
@@ -104,8 +110,8 @@
 	if(str3 != nil)
 	{
 	    in2 = [MString GetInCludeBeforKeyNum:ToHFile :str3];
-		
 		header = [@",\n" stringByAppendingString:header];
+
 
  		[ToHFile insertString:header atIndex:in2];
 	}

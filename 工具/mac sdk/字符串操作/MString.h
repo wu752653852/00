@@ -16,6 +16,14 @@
 + (bool)StringHaveString:(NSString *)str :(NSString *)c;
 + (int)getCharLen:(const char *)a;
 
++ (bool)StringBeginWithString:(NSString *)str :(NSString *)begin;
++ (bool)StringEndWithString:(NSString *)str :(NSString *)end;
++ (NSString *)RemoveEndString:(NSString *)str :(NSString *)remove;
+
+ 
+
 + (NSString *)GetDesktopDir:(NSString *)file;
+
+
 
 @end
