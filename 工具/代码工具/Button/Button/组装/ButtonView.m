@@ -38,7 +38,7 @@
 {
 
 	if(text == nil)
- 	 text = [[NSTextField alloc] initWithFrame:CGRectMake(120, 480 - 40, 160, 30)];
+ 	 text = [[NSTextField alloc] initWithFrame:CGRectMake(0, 270, 320, 480 - 270)];
 	text.delegate = self;
 	[text setSelectable:YES];
 	[text setEditable:YES];
@@ -98,7 +98,7 @@
 	}
 	
 	{
-		NSRect rect = CGRectMake(240, 400, 60, 30);
+		NSRect rect = CGRectMake(240, 120, 60, 30);
 		
 		NSButton *button  = [[NSButton alloc] init];
 		NSImage *image =[NSImage imageNamed:@"zhengli.png"];
@@ -324,15 +324,25 @@
 	return viewBelow;
 }
 
-- (void)mouseDown:(NSEvent *)theEvent {
-	[self JISuan99];
-
+- (void)mouseDown:(NSEvent *)theEvent
+{
 	NSView *viewBelow = [self findNextSiblingBelowEventLocation:theEvent];
 	if (viewBelow) {
 		[[self window] makeFirstResponder:viewBelow];
-	}
+ 	}
+
+	
 	[super mouseDown:theEvent];
 }
+
+- (void)mouseUp:(NSEvent *)theEvent
+{
+	[self JISuan99];
+	[text becomeFirstResponder];
+	[super mouseUp:theEvent];
+
+}
+
 
 
 
