@@ -20,6 +20,8 @@
     self = [super initWithFrame:frame];
     if (self) {
 		[self load];
+/// 		[self setAcceptsTouchEvents:YES];
+//		[self setWantsRestingTouches:YES]; // for thumb
         // Initialization code here.
     }
     return self;
@@ -280,6 +282,58 @@
 {
  	[self JISuan99];
 }
+
+/*
+- (NSView *)hitTest:(NSPoint)aPoint
+{
+    // pass-through events that don't hit one of the visible subviews
+    for (NSView *subView in [self subviews]) {
+        if (![subView isHidden] && [subView hitTest:aPoint])
+            return subView;
+    }
+	
+    return nil;
+}
+
+
+
+- (void)mouseDragged:(NSEvent *)theEvent
+{
+	[self JISuan99];
+
+    [super mouseDragged:theEvent];
+}
+	*/
+
+- (NSView *)findNextSiblingBelowEventLocation:(NSEvent *)theEvent {
+	// Translate the event location to view coordinates
+	NSPoint location = [theEvent locationInWindow];
+	NSPoint convertedLocation = [self convertPointFromBase:location];
+	
+	// Find next view below self
+	NSArray *siblings = [[self superview] subviews];
+	NSView *viewBelow = nil;
+	for (NSView *view in siblings) {
+		if (view != self) {
+			NSView *hitView = [view hitTest:convertedLocation];
+			if (hitView != nil) {
+				viewBelow = hitView;
+			}
+		}
+	}
+	return viewBelow;
+}
+
+- (void)mouseDown:(NSEvent *)theEvent {
+	[self JISuan99];
+
+	NSView *viewBelow = [self findNextSiblingBelowEventLocation:theEvent];
+	if (viewBelow) {
+		[[self window] makeFirstResponder:viewBelow];
+	}
+	[super mouseDown:theEvent];
+}
+
 
 
 @end

@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 
 @interface ButtonView : NSView<NSTextFieldDelegate,
-NSTableViewDelegate>
+NSTableViewDelegate,NSValidatedUserInterfaceItem>
 {
 	NSTextField *text;
 	
