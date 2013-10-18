@@ -184,8 +184,8 @@
 	for(int i = 0;i < [array_mut count];i ++)
 	{
 		NSString *str = [[array_mut objectAtIndex:i] lastPathComponent];
-		
-		NSLog(@"%@", str);
+        str = [str substringToIndex:[str length] - 4];
+		TEST_NSLog(@"%@", str);
 		NSButton *button = [MButton GetStringButton:str :NSMakePoint(60 , 60 * (i + 1)) :@selector(JISuan3:) :self];
 		button.tag = i;
 		[buttonArray addObject:button];
@@ -193,13 +193,7 @@
  	}
 }
 
-- (void)JISuan
-{
-	NSString *str = [MStringFile GetStringFromFile:@"button.txt"];
-	TEST_NSLog(@"%@", str);
-	
-	[self save:str];
-}
+
 
 - (void)JISuan2
 {

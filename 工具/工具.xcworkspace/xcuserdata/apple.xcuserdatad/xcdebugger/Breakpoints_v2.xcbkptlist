@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#20195;&#30721;&#24037;&#20855;/Button/Button/&#32452;&#35013;/ButtonView.m"
-            timestampString = "403754654.346276"
+            timestampString = "403783700.770029"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "302"
-            endingLineNumber = "302"
+            startingLineNumber = "296"
+            endingLineNumber = "296"
             landmarkName = "@implementation ButtonView"
             landmarkType = "3">
          </BreakpointContent>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#20195;&#30721;&#24037;&#20855;/Button/Button/&#32452;&#35013;/ButtonView.m"
-            timestampString = "403755503.716692"
+            timestampString = "403783700.770029"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "331"
-            endingLineNumber = "331"
+            startingLineNumber = "325"
+            endingLineNumber = "325"
             landmarkName = "-mouseDown:"
             landmarkType = "5">
          </BreakpointContent>
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#20195;&#30721;&#24037;&#20855;/Button/Button/&#32452;&#35013;/ButtonView.m"
-            timestampString = "403755508.35611"
+            timestampString = "403783700.770029"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "342"
-            endingLineNumber = "342"
+            startingLineNumber = "336"
+            endingLineNumber = "336"
             landmarkName = "-mouseUp:"
             landmarkType = "5">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "&#20195;&#30721;&#24037;&#20855;/Button/Button/&#32452;&#35013;/ButtonView.m"
-            timestampString = "403759016.297291"
+            timestampString = "403783700.770029"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "244"
-            endingLineNumber = "244"
+            startingLineNumber = "238"
+            endingLineNumber = "238"
             landmarkName = "-JISuan4"
             landmarkType = "5">
          </BreakpointContent>
