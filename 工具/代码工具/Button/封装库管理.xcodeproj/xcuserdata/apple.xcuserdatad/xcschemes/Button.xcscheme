@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "188F62E1180E3B7C00F545A0"
-               BuildableName = "Button.app"
+               BuildableName = "&#23553;&#35013;&#24211;&#31649;&#29702;.app"
                BlueprintName = "&#23553;&#35013;&#24211;&#31649;&#29702;"
                ReferencedContainer = "container:&#23553;&#35013;&#24211;&#31649;&#29702;.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "188F6302180E3B7C00F545A0"
-               BuildableName = "ButtonTests.xctest"
+               BuildableName = "&#23553;&#35013;&#24211;&#31649;&#29702;Tests.xctest"
                BlueprintName = "&#23553;&#35013;&#24211;&#31649;&#29702;Tests"
                ReferencedContainer = "container:&#23553;&#35013;&#24211;&#31649;&#29702;.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "188F62E1180E3B7C00F545A0"
-            BuildableName = "Button.app"
+            BuildableName = "&#23553;&#35013;&#24211;&#31649;&#29702;.app"
             BlueprintName = "&#23553;&#35013;&#24211;&#31649;&#29702;"
             ReferencedContainer = "container:&#23553;&#35013;&#24211;&#31649;&#29702;.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "188F62E1180E3B7C00F545A0"
-            BuildableName = "Button.app"
+            BuildableName = "&#23553;&#35013;&#24211;&#31649;&#29702;.app"
             BlueprintName = "&#23553;&#35013;&#24211;&#31649;&#29702;"
             ReferencedContainer = "container:&#23553;&#35013;&#24211;&#31649;&#29702;.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "188F62E1180E3B7C00F545A0"
-            BuildableName = "Button.app"
+            BuildableName = "&#23553;&#35013;&#24211;&#31649;&#29702;.app"
             BlueprintName = "&#23553;&#35013;&#24211;&#31649;&#29702;"
             ReferencedContainer = "container:&#23553;&#35013;&#24211;&#31649;&#29702;.xcodeproj">
          </BuildableReference>

@@ -131,14 +131,19 @@
 	{
 		[buttonArray removeAllObjects];
 	}
+	NSString *path112 = [MString GetDesktopDir:@"/tool/模板"];
 	if([[text2 stringValue] length] < 1)
 	{
-    	NSMutableArray *array_mu0t = [MStringFile getFileListAtPathWithHouZhui:@"txt" :@"/Users/wuyaodong/Desktop/tool/模板"];
+ 		
+   		
+		  
+		
+    	NSMutableArray *array_mu0t = [MStringFile getFileListAtPathWithHouZhui:@"txt" :path112];
 		array_mut = [array_mu0t mutableCopy];
 	}
 	else
 	{
-		NSArray *array_o = [MStringFile getFileListAtPathWithHouZhui:@"txt" :@"/Users/wuyaodong/Desktop/tool/模板"];
+		NSArray *array_o = [MStringFile getFileListAtPathWithHouZhui:@"txt" :path112];
     	TEST_NSLog(@"%d", (int)[array_o count]);
 		for(NSString *str in array_o)
 		{

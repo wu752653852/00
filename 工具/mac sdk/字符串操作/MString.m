@@ -60,8 +60,8 @@
 	{
 		return true;
 	}
-  const char *char_content = [str cStringUsingEncoding:NSASCIIStringEncoding];
-	const char *cc = [c cStringUsingEncoding:NSASCIIStringEncoding];
+  const char *char_content = [str cStringUsingEncoding:NSUTF8StringEncoding];
+	const char *cc = [c cStringUsingEncoding:NSUTF8StringEncoding];
 	
 //	for(int i = 0;i < )
 	int ca =(int)[c length];
@@ -102,6 +102,14 @@
 		i ++;
 	}while (a[i] == '\0');
 	return i - 1;
+}
+
++ (NSString *)GetDesktopDir:(NSString *)file
+{
+	NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDesktopDirectory, NSUserDomainMask, YES);
+	NSString *str112 = [paths objectAtIndex:0];
+	
+	return [str112 stringByAppendingString:file];
 }
 
 

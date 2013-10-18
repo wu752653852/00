@@ -518,7 +518,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/wuyaodong/Desktop/tool;
+				CONFIGURATION_BUILD_DIR = "~/Desktop/tool";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Button/封装库管理-Prefix.pch";
 				INFOPLIST_FILE = "Button/封装库管理-Info.plist";
@@ -532,7 +532,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				CONFIGURATION_BUILD_DIR = /Users/wuyaodong/Desktop/tool;
+				CONFIGURATION_BUILD_DIR = "~/Desktop/tool";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Button/封装库管理-Prefix.pch";
 				INFOPLIST_FILE = "Button/封装库管理-Info.plist";
