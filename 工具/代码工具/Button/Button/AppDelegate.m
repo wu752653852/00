@@ -9,7 +9,6 @@
 #import "AppDelegate.h"
  #import "ButtonView.h"
 
-wocaonidaye
 @implementation AppDelegate
 //@synthesize window;
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
