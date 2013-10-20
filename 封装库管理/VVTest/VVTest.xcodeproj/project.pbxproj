@@ -1,0 +1,611 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FF5F0315181473CF0070E345 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5F0314181473CF0070E345 /* Cocoa.framework */; };
+		FF5F031F181473CF0070E345 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF5F031D181473CF0070E345 /* InfoPlist.strings */; };
+		FF5F0321181473CF0070E345 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5F0320181473CF0070E345 /* main.m */; };
+		FF5F0325181473CF0070E345 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FF5F0323181473CF0070E345 /* Credits.rtf */; };
+		FF5F0328181473CF0070E345 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5F0327181473CF0070E345 /* AppDelegate.m */; };
+		FF5F032D181473CF0070E345 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF5F032C181473CF0070E345 /* Images.xcassets */; };
+		FF5F0334181473CF0070E345 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5F0333181473CF0070E345 /* XCTest.framework */; };
+		FF5F0335181473CF0070E345 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5F0314181473CF0070E345 /* Cocoa.framework */; };
+		FF5F033D181473CF0070E345 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF5F033B181473CF0070E345 /* InfoPlist.strings */; };
+		FF5F033F181473CF0070E345 /* VVTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5F033E181473CF0070E345 /* VVTestTests.m */; };
+		FF5F035A181474380070E345 /* Zhengli.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5F034B181474380070E345 /* Zhengli.m */; };
+		FF5F035B181474380070E345 /* ZhengliH.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5F034D181474380070E345 /* ZhengliH.m */; };
+		FF5F035C181474380070E345 /* ZhengliM.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5F034F181474380070E345 /* ZhengliM.m */; };
+		FF5F035D181474380070E345 /* ButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5F0352181474380070E345 /* ButtonView.m */; };
+		FF5F035E181474380070E345 /* GetHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5F0355181474380070E345 /* GetHeader.m */; };
+		FF5F035F181474380070E345 /* GetMFile.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5F0357181474380070E345 /* GetMFile.m */; };
+		FF5F0360181474380070E345 /* zuzhuang.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5F0359181474380070E345 /* zuzhuang.m */; };
+		FFDF82421814786C008B01A6 /* MButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDF82381814786C008B01A6 /* MButton.m */; };
+		FFDF82431814786C008B01A6 /* MString.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDF823B1814786C008B01A6 /* MString.m */; };
+		FFDF82441814786C008B01A6 /* MStringFile.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDF823E1814786C008B01A6 /* MStringFile.m */; };
+		FFDF82451814786C008B01A6 /* MMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDF82411814786C008B01A6 /* MMenuItem.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FF5F0336181473CF0070E345 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FF5F0309181473CF0070E345 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FF5F0310181473CF0070E345;
+			remoteInfo = VVTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FF5F0311181473CF0070E345 /* VVTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VVTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF5F0314181473CF0070E345 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		FF5F0317181473CF0070E345 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		FF5F0318181473CF0070E345 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		FF5F0319181473CF0070E345 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		FF5F031C181473CF0070E345 /* VVTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VVTest-Info.plist"; sourceTree = "<group>"; };
+		FF5F031E181473CF0070E345 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FF5F0320181473CF0070E345 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FF5F0322181473CF0070E345 /* VVTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VVTest-Prefix.pch"; sourceTree = "<group>"; };
+		FF5F0324181473CF0070E345 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		FF5F0326181473CF0070E345 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FF5F0327181473CF0070E345 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FF5F032C181473CF0070E345 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FF5F0332181473CF0070E345 /* VVTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VVTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF5F0333181473CF0070E345 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		FF5F033A181473CF0070E345 /* VVTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VVTestTests-Info.plist"; sourceTree = "<group>"; };
+		FF5F033C181473CF0070E345 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FF5F033E181473CF0070E345 /* VVTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VVTestTests.m; sourceTree = "<group>"; };
+		FF5F034A181474380070E345 /* Zhengli.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Zhengli.h; sourceTree = "<group>"; };
+		FF5F034B181474380070E345 /* Zhengli.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Zhengli.m; sourceTree = "<group>"; };
+		FF5F034C181474380070E345 /* ZhengliH.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZhengliH.h; sourceTree = "<group>"; };
+		FF5F034D181474380070E345 /* ZhengliH.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZhengliH.m; sourceTree = "<group>"; };
+		FF5F034E181474380070E345 /* ZhengliM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZhengliM.h; sourceTree = "<group>"; };
+		FF5F034F181474380070E345 /* ZhengliM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZhengliM.m; sourceTree = "<group>"; };
+		FF5F0351181474380070E345 /* ButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonView.h; sourceTree = "<group>"; };
+		FF5F0352181474380070E345 /* ButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonView.m; sourceTree = "<group>"; };
+		FF5F0354181474380070E345 /* GetHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetHeader.h; sourceTree = "<group>"; };
+		FF5F0355181474380070E345 /* GetHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetHeader.m; sourceTree = "<group>"; };
+		FF5F0356181474380070E345 /* GetMFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetMFile.h; sourceTree = "<group>"; };
+		FF5F0357181474380070E345 /* GetMFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetMFile.m; sourceTree = "<group>"; };
+		FF5F0358181474380070E345 /* zuzhuang.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zuzhuang.h; sourceTree = "<group>"; };
+		FF5F0359181474380070E345 /* zuzhuang.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zuzhuang.m; sourceTree = "<group>"; };
+		FFDF82371814786C008B01A6 /* MButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MButton.h; sourceTree = "<group>"; };
+		FFDF82381814786C008B01A6 /* MButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MButton.m; sourceTree = "<group>"; };
+		FFDF823A1814786C008B01A6 /* MString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MString.h; sourceTree = "<group>"; };
+		FFDF823B1814786C008B01A6 /* MString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MString.m; sourceTree = "<group>"; };
+		FFDF823D1814786C008B01A6 /* MStringFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MStringFile.h; sourceTree = "<group>"; };
+		FFDF823E1814786C008B01A6 /* MStringFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MStringFile.m; sourceTree = "<group>"; };
+		FFDF82401814786C008B01A6 /* MMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMenuItem.h; sourceTree = "<group>"; };
+		FFDF82411814786C008B01A6 /* MMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMenuItem.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FF5F030E181473CF0070E345 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF5F0315181473CF0070E345 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF5F032F181473CF0070E345 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF5F0335181473CF0070E345 /* Cocoa.framework in Frameworks */,
+				FF5F0334181473CF0070E345 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FF5F0308181473CF0070E345 = {
+			isa = PBXGroup;
+			children = (
+				FF5F031A181473CF0070E345 /* VVTest */,
+				FF5F0338181473CF0070E345 /* VVTestTests */,
+				FF5F0313181473CF0070E345 /* Frameworks */,
+				FF5F0312181473CF0070E345 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FF5F0312181473CF0070E345 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FF5F0311181473CF0070E345 /* VVTest.app */,
+				FF5F0332181473CF0070E345 /* VVTestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FF5F0313181473CF0070E345 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF5F0314181473CF0070E345 /* Cocoa.framework */,
+				FF5F0333181473CF0070E345 /* XCTest.framework */,
+				FF5F0316181473CF0070E345 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF5F0316181473CF0070E345 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF5F0317181473CF0070E345 /* AppKit.framework */,
+				FF5F0318181473CF0070E345 /* CoreData.framework */,
+				FF5F0319181473CF0070E345 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		FF5F031A181473CF0070E345 /* VVTest */ = {
+			isa = PBXGroup;
+			children = (
+				FF5F0326181473CF0070E345 /* AppDelegate.h */,
+				FF5F0327181473CF0070E345 /* AppDelegate.m */,
+				FFDF82351814786C008B01A6 /* mac sdk */,
+				FF5F0348181474380070E345 /* class */,
+				FF5F032C181473CF0070E345 /* Images.xcassets */,
+				FF5F031B181473CF0070E345 /* Supporting Files */,
+			);
+			path = VVTest;
+			sourceTree = "<group>";
+		};
+		FF5F031B181473CF0070E345 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF5F031C181473CF0070E345 /* VVTest-Info.plist */,
+				FF5F031D181473CF0070E345 /* InfoPlist.strings */,
+				FF5F0320181473CF0070E345 /* main.m */,
+				FF5F0322181473CF0070E345 /* VVTest-Prefix.pch */,
+				FF5F0323181473CF0070E345 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FF5F0338181473CF0070E345 /* VVTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				FF5F033E181473CF0070E345 /* VVTestTests.m */,
+				FF5F0339181473CF0070E345 /* Supporting Files */,
+			);
+			path = VVTestTests;
+			sourceTree = "<group>";
+		};
+		FF5F0339181473CF0070E345 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FF5F033A181473CF0070E345 /* VVTestTests-Info.plist */,
+				FF5F033B181473CF0070E345 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FF5F0348181474380070E345 /* class */ = {
+			isa = PBXGroup;
+			children = (
+				FF5F0349181474380070E345 /* 整理 */,
+				FF5F0350181474380070E345 /* 界面 */,
+				FF5F0353181474380070E345 /* 组装 */,
+			);
+			name = class;
+			path = ../../class;
+			sourceTree = "<group>";
+		};
+		FF5F0349181474380070E345 /* 整理 */ = {
+			isa = PBXGroup;
+			children = (
+				FF5F034A181474380070E345 /* Zhengli.h */,
+				FF5F034B181474380070E345 /* Zhengli.m */,
+				FF5F034C181474380070E345 /* ZhengliH.h */,
+				FF5F034D181474380070E345 /* ZhengliH.m */,
+				FF5F034E181474380070E345 /* ZhengliM.h */,
+				FF5F034F181474380070E345 /* ZhengliM.m */,
+			);
+			path = "整理";
+			sourceTree = "<group>";
+		};
+		FF5F0350181474380070E345 /* 界面 */ = {
+			isa = PBXGroup;
+			children = (
+				FF5F0351181474380070E345 /* ButtonView.h */,
+				FF5F0352181474380070E345 /* ButtonView.m */,
+			);
+			path = "界面";
+			sourceTree = "<group>";
+		};
+		FF5F0353181474380070E345 /* 组装 */ = {
+			isa = PBXGroup;
+			children = (
+				FF5F0354181474380070E345 /* GetHeader.h */,
+				FF5F0355181474380070E345 /* GetHeader.m */,
+				FF5F0356181474380070E345 /* GetMFile.h */,
+				FF5F0357181474380070E345 /* GetMFile.m */,
+				FF5F0358181474380070E345 /* zuzhuang.h */,
+				FF5F0359181474380070E345 /* zuzhuang.m */,
+			);
+			path = "组装";
+			sourceTree = "<group>";
+		};
+		FFDF82351814786C008B01A6 /* mac sdk */ = {
+			isa = PBXGroup;
+			children = (
+				FFDF82361814786C008B01A6 /* 基本控件 */,
+				FFDF82391814786C008B01A6 /* 字符串操作 */,
+				FFDF823C1814786C008B01A6 /* 文件操作 */,
+				FFDF823F1814786C008B01A6 /* 菜单 */,
+			);
+			name = "mac sdk";
+			path = "../../mac sdk";
+			sourceTree = "<group>";
+		};
+		FFDF82361814786C008B01A6 /* 基本控件 */ = {
+			isa = PBXGroup;
+			children = (
+				FFDF82371814786C008B01A6 /* MButton.h */,
+				FFDF82381814786C008B01A6 /* MButton.m */,
+			);
+			path = "基本控件";
+			sourceTree = "<group>";
+		};
+		FFDF82391814786C008B01A6 /* 字符串操作 */ = {
+			isa = PBXGroup;
+			children = (
+				FFDF823A1814786C008B01A6 /* MString.h */,
+				FFDF823B1814786C008B01A6 /* MString.m */,
+			);
+			path = "字符串操作";
+			sourceTree = "<group>";
+		};
+		FFDF823C1814786C008B01A6 /* 文件操作 */ = {
+			isa = PBXGroup;
+			children = (
+				FFDF823D1814786C008B01A6 /* MStringFile.h */,
+				FFDF823E1814786C008B01A6 /* MStringFile.m */,
+			);
+			path = "文件操作";
+			sourceTree = "<group>";
+		};
+		FFDF823F1814786C008B01A6 /* 菜单 */ = {
+			isa = PBXGroup;
+			children = (
+				FFDF82401814786C008B01A6 /* MMenuItem.h */,
+				FFDF82411814786C008B01A6 /* MMenuItem.m */,
+			);
+			path = "菜单";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FF5F0310181473CF0070E345 /* VVTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF5F0342181473CF0070E345 /* Build configuration list for PBXNativeTarget "VVTest" */;
+			buildPhases = (
+				FF5F030D181473CF0070E345 /* Sources */,
+				FF5F030E181473CF0070E345 /* Frameworks */,
+				FF5F030F181473CF0070E345 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VVTest;
+			productName = VVTest;
+			productReference = FF5F0311181473CF0070E345 /* VVTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FF5F0331181473CF0070E345 /* VVTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FF5F0345181473CF0070E345 /* Build configuration list for PBXNativeTarget "VVTestTests" */;
+			buildPhases = (
+				FF5F032E181473CF0070E345 /* Sources */,
+				FF5F032F181473CF0070E345 /* Frameworks */,
+				FF5F0330181473CF0070E345 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FF5F0337181473CF0070E345 /* PBXTargetDependency */,
+			);
+			name = VVTestTests;
+			productName = VVTestTests;
+			productReference = FF5F0332181473CF0070E345 /* VVTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FF5F0309181473CF0070E345 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = wwegos;
+				TargetAttributes = {
+					FF5F0331181473CF0070E345 = {
+						TestTargetID = FF5F0310181473CF0070E345;
+					};
+				};
+			};
+			buildConfigurationList = FF5F030C181473CF0070E345 /* Build configuration list for PBXProject "VVTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FF5F0308181473CF0070E345;
+			productRefGroup = FF5F0312181473CF0070E345 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FF5F0310181473CF0070E345 /* VVTest */,
+				FF5F0331181473CF0070E345 /* VVTestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FF5F030F181473CF0070E345 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF5F031F181473CF0070E345 /* InfoPlist.strings in Resources */,
+				FF5F032D181473CF0070E345 /* Images.xcassets in Resources */,
+				FF5F0325181473CF0070E345 /* Credits.rtf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF5F0330181473CF0070E345 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF5F033D181473CF0070E345 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FF5F030D181473CF0070E345 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFDF82441814786C008B01A6 /* MStringFile.m in Sources */,
+				FFDF82431814786C008B01A6 /* MString.m in Sources */,
+				FF5F0328181473CF0070E345 /* AppDelegate.m in Sources */,
+				FF5F0321181473CF0070E345 /* main.m in Sources */,
+				FFDF82451814786C008B01A6 /* MMenuItem.m in Sources */,
+				FF5F035F181474380070E345 /* GetMFile.m in Sources */,
+				FF5F035C181474380070E345 /* ZhengliM.m in Sources */,
+				FF5F0360181474380070E345 /* zuzhuang.m in Sources */,
+				FFDF82421814786C008B01A6 /* MButton.m in Sources */,
+				FF5F035B181474380070E345 /* ZhengliH.m in Sources */,
+				FF5F035E181474380070E345 /* GetHeader.m in Sources */,
+				FF5F035D181474380070E345 /* ButtonView.m in Sources */,
+				FF5F035A181474380070E345 /* Zhengli.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF5F032E181473CF0070E345 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF5F033F181473CF0070E345 /* VVTestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FF5F0337181473CF0070E345 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FF5F0310181473CF0070E345 /* VVTest */;
+			targetProxy = FF5F0336181473CF0070E345 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FF5F031D181473CF0070E345 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF5F031E181473CF0070E345 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		FF5F0323181473CF0070E345 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF5F0324181473CF0070E345 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		FF5F033B181473CF0070E345 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FF5F033C181473CF0070E345 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FF5F0340181473CF0070E345 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		FF5F0341181473CF0070E345 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		FF5F0343181473CF0070E345 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "~/Desktop/tool";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VVTest/VVTest-Prefix.pch";
+				INFOPLIST_FILE = "VVTest/VVTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		FF5F0344181473CF0070E345 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = "~/Desktop/tool";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VVTest/VVTest-Prefix.pch";
+				INFOPLIST_FILE = "VVTest/VVTest-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		FF5F0346181473CF0070E345 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VVTest.app/Contents/MacOS/VVTest";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VVTest/VVTest-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "VVTestTests/VVTestTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		FF5F0347181473CF0070E345 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VVTest.app/Contents/MacOS/VVTest";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VVTest/VVTest-Prefix.pch";
+				INFOPLIST_FILE = "VVTestTests/VVTestTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FF5F030C181473CF0070E345 /* Build configuration list for PBXProject "VVTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF5F0340181473CF0070E345 /* Debug */,
+				FF5F0341181473CF0070E345 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF5F0342181473CF0070E345 /* Build configuration list for PBXNativeTarget "VVTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF5F0343181473CF0070E345 /* Debug */,
+				FF5F0344181473CF0070E345 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF5F0345181473CF0070E345 /* Build configuration list for PBXNativeTarget "VVTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FF5F0346181473CF0070E345 /* Debug */,
+				FF5F0347181473CF0070E345 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FF5F0309181473CF0070E345 /* Project object */;
+}
