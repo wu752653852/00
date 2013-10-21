@@ -1,14 +1,14 @@
 //
-//  MString.m
+//  MMString.m
 //  Button
 //
 //  Created by apple on 13-10-16.
 //  Copyright (c) 2013年 manboker. All rights reserved.
 //
 
-#import "MString.h"
+#import "MMString.h"
 //#import "MDebugUtils.h"
-@implementation MString
+@implementation MMString
 + (NSString *)GetStringFrom:(NSString *)str :(NSString *)begin :(NSString *)end
 {
 	NSArray *arra = [str componentsSeparatedByString:begin];
@@ -65,7 +65,7 @@
 	
 //	for(int i = 0;i < )
 	int ca =(int)[c length];
-	//[MString getCharLen:cc];
+	//[MMString getCharLen:cc];
 //	NSLog(@"%d", ca);
 	bool returnvalue = true;
 	for(int i = 0;i < ca;i ++)
@@ -75,7 +75,7 @@
 			returnvalue = false;
 		}
 	}
-	int cb = [MString getCharLen:char_content];
+	int cb = [MMString getCharLen:char_content];
 
 	
 	
@@ -98,9 +98,9 @@
 {
 	const char *char_content = [str cStringUsingEncoding:NSUTF8StringEncoding];
 	const char *cc = [end cStringUsingEncoding:NSUTF8StringEncoding];
-	int ca = [MString getCharLen:cc];
+	int ca = [MMString getCharLen:cc];
 	bool returnvalue = true;
-	int cb = [MString getCharLen:char_content];
+	int cb = [MMString getCharLen:char_content];
 
 	for(int i = 0;i < ca;i ++)
 	{
@@ -112,10 +112,54 @@
 	return returnvalue;
 }
 
++ (bool)StringEndIsEmpty:(NSString *)str
+{
+	const char *char_content = [str cStringUsingEncoding:NSUTF8StringEncoding];
+	const char *cc = [@" " cStringUsingEncoding:NSUTF8StringEncoding];
+	int ca = [MMString getCharLen:cc];
+	bool returnvalue = true;
+	int cb = [MMString getCharLen:char_content];
+	
+	for(int i = 0;i < ca;i ++)
+	{
+		if(cc[i] != char_content[cb - 1 - i])
+		{
+			returnvalue = false;
+		}
+	}
+	return returnvalue;
+}
+
++ (bool)StringEndRightIsString:(NSString *)strFull :(NSInteger)integer :(NSString *)str
+{
+	const char *char_content = [strFull cStringUsingEncoding:NSUTF8StringEncoding];
+	const char *cc = [str cStringUsingEncoding:NSUTF8StringEncoding];
+	int ca = [MMString getCharLen:cc];
+//	bool returnvalue = true;
+ 	int k = 0;
+ 
+	for(int i = (int)integer;i < ca + (int)integer;i ++)
+	{
+		if(cc[k] == char_content[i])
+		{
+//			returnvalue = false;
+					k ++;
+		}
+
+	}
+ 	if(k == ca)
+	{
+		return true;
+	}
+	return false;
+//	return returnvalue;
+}
+
+
 
 + (NSString *)RemoveEndString:(NSString *)str :(NSString *)remove
 {
-	if([MString StringEndWithString:str :remove])
+	if([MMString StringEndWithString:str :remove])
 	{
  	   str = [str substringToIndex:[str length] - [remove length]];
 	}
@@ -146,7 +190,7 @@
 {
 	const char *char_content = [str cStringUsingEncoding:NSUTF8StringEncoding];
 	const char *cc = [begin cStringUsingEncoding:NSUTF8StringEncoding];
-	int ca = [MString getCharLen:cc];
+	int ca = [MMString getCharLen:cc];
 	bool returnvalue = true;
 	for(int i = 0;i < ca;i ++)
 	{
@@ -157,6 +201,7 @@
 	}
 	return returnvalue;
 }
+
 
 
 

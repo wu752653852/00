@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18FCF2FA18152C1A00BC0DB8 /* MMButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF2ED18152C1A00BC0DB8 /* MMButton.m */; };
+		18FCF2FB18152C1A00BC0DB8 /* MMStringFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF2F018152C1A00BC0DB8 /* MMStringFile.m */; };
+		18FCF2FC18152C1A00BC0DB8 /* MMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF2F318152C1A00BC0DB8 /* MMenuItem.m */; };
+		18FCF2FD18152C1A00BC0DB8 /* MMString.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF2F618152C1A00BC0DB8 /* MMString.m */; };
+		18FCF2FE18152C1A00BC0DB8 /* MMDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FCF2F918152C1A00BC0DB8 /* MMDate.m */; };
 		FF5F0315181473CF0070E345 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5F0314181473CF0070E345 /* Cocoa.framework */; };
 		FF5F031F181473CF0070E345 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FF5F031D181473CF0070E345 /* InfoPlist.strings */; };
 		FF5F0321181473CF0070E345 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5F0320181473CF0070E345 /* main.m */; };
@@ -24,10 +29,6 @@
 		FF5F035E181474380070E345 /* GetHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5F0355181474380070E345 /* GetHeader.m */; };
 		FF5F035F181474380070E345 /* GetMFile.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5F0357181474380070E345 /* GetMFile.m */; };
 		FF5F0360181474380070E345 /* zuzhuang.m in Sources */ = {isa = PBXBuildFile; fileRef = FF5F0359181474380070E345 /* zuzhuang.m */; };
-		FFDF82421814786C008B01A6 /* MButton.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDF82381814786C008B01A6 /* MButton.m */; };
-		FFDF82431814786C008B01A6 /* MString.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDF823B1814786C008B01A6 /* MString.m */; };
-		FFDF82441814786C008B01A6 /* MStringFile.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDF823E1814786C008B01A6 /* MStringFile.m */; };
-		FFDF82451814786C008B01A6 /* MMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = FFDF82411814786C008B01A6 /* MMenuItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +42,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18FCF2EC18152C1A00BC0DB8 /* MMButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMButton.h; sourceTree = "<group>"; };
+		18FCF2ED18152C1A00BC0DB8 /* MMButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMButton.m; sourceTree = "<group>"; };
+		18FCF2EF18152C1A00BC0DB8 /* MMStringFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMStringFile.h; sourceTree = "<group>"; };
+		18FCF2F018152C1A00BC0DB8 /* MMStringFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMStringFile.m; sourceTree = "<group>"; };
+		18FCF2F218152C1A00BC0DB8 /* MMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMenuItem.h; sourceTree = "<group>"; };
+		18FCF2F318152C1A00BC0DB8 /* MMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMenuItem.m; sourceTree = "<group>"; };
+		18FCF2F518152C1A00BC0DB8 /* MMString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMString.h; sourceTree = "<group>"; };
+		18FCF2F618152C1A00BC0DB8 /* MMString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMString.m; sourceTree = "<group>"; };
+		18FCF2F818152C1A00BC0DB8 /* MMDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDate.h; sourceTree = "<group>"; };
+		18FCF2F918152C1A00BC0DB8 /* MMDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDate.m; sourceTree = "<group>"; };
 		FF5F0311181473CF0070E345 /* VVTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VVTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF5F0314181473CF0070E345 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		FF5F0317181473CF0070E345 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -73,14 +84,6 @@
 		FF5F0357181474380070E345 /* GetMFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetMFile.m; sourceTree = "<group>"; };
 		FF5F0358181474380070E345 /* zuzhuang.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zuzhuang.h; sourceTree = "<group>"; };
 		FF5F0359181474380070E345 /* zuzhuang.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = zuzhuang.m; sourceTree = "<group>"; };
-		FFDF82371814786C008B01A6 /* MButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MButton.h; sourceTree = "<group>"; };
-		FFDF82381814786C008B01A6 /* MButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MButton.m; sourceTree = "<group>"; };
-		FFDF823A1814786C008B01A6 /* MString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MString.h; sourceTree = "<group>"; };
-		FFDF823B1814786C008B01A6 /* MString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MString.m; sourceTree = "<group>"; };
-		FFDF823D1814786C008B01A6 /* MStringFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MStringFile.h; sourceTree = "<group>"; };
-		FFDF823E1814786C008B01A6 /* MStringFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MStringFile.m; sourceTree = "<group>"; };
-		FFDF82401814786C008B01A6 /* MMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMenuItem.h; sourceTree = "<group>"; };
-		FFDF82411814786C008B01A6 /* MMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMenuItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +107,64 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18FCF2EA18152C1A00BC0DB8 /* mac sdk */ = {
+			isa = PBXGroup;
+			children = (
+				18FCF2EB18152C1A00BC0DB8 /* MControl */,
+				18FCF2EE18152C1A00BC0DB8 /* MFile */,
+				18FCF2F118152C1A00BC0DB8 /* MMenu */,
+				18FCF2F418152C1A00BC0DB8 /* MString */,
+				18FCF2F718152C1A00BC0DB8 /* timer */,
+			);
+			name = "mac sdk";
+			path = "../../mac sdk";
+			sourceTree = "<group>";
+		};
+		18FCF2EB18152C1A00BC0DB8 /* MControl */ = {
+			isa = PBXGroup;
+			children = (
+				18FCF2EC18152C1A00BC0DB8 /* MMButton.h */,
+				18FCF2ED18152C1A00BC0DB8 /* MMButton.m */,
+			);
+			path = MControl;
+			sourceTree = "<group>";
+		};
+		18FCF2EE18152C1A00BC0DB8 /* MFile */ = {
+			isa = PBXGroup;
+			children = (
+				18FCF2EF18152C1A00BC0DB8 /* MMStringFile.h */,
+				18FCF2F018152C1A00BC0DB8 /* MMStringFile.m */,
+			);
+			path = MFile;
+			sourceTree = "<group>";
+		};
+		18FCF2F118152C1A00BC0DB8 /* MMenu */ = {
+			isa = PBXGroup;
+			children = (
+				18FCF2F218152C1A00BC0DB8 /* MMenuItem.h */,
+				18FCF2F318152C1A00BC0DB8 /* MMenuItem.m */,
+			);
+			path = MMenu;
+			sourceTree = "<group>";
+		};
+		18FCF2F418152C1A00BC0DB8 /* MString */ = {
+			isa = PBXGroup;
+			children = (
+				18FCF2F518152C1A00BC0DB8 /* MMString.h */,
+				18FCF2F618152C1A00BC0DB8 /* MMString.m */,
+			);
+			path = MString;
+			sourceTree = "<group>";
+		};
+		18FCF2F718152C1A00BC0DB8 /* timer */ = {
+			isa = PBXGroup;
+			children = (
+				18FCF2F818152C1A00BC0DB8 /* MMDate.h */,
+				18FCF2F918152C1A00BC0DB8 /* MMDate.m */,
+			);
+			path = timer;
+			sourceTree = "<group>";
+		};
 		FF5F0308181473CF0070E345 = {
 			isa = PBXGroup;
 			children = (
@@ -148,7 +209,7 @@
 			children = (
 				FF5F0326181473CF0070E345 /* AppDelegate.h */,
 				FF5F0327181473CF0070E345 /* AppDelegate.m */,
-				FFDF82351814786C008B01A6 /* mac sdk */,
+				18FCF2EA18152C1A00BC0DB8 /* mac sdk */,
 				FF5F0348181474380070E345 /* class */,
 				FF5F032C181473CF0070E345 /* Images.xcassets */,
 				FF5F031B181473CF0070E345 /* Supporting Files */,
@@ -230,54 +291,6 @@
 				FF5F0359181474380070E345 /* zuzhuang.m */,
 			);
 			path = "组装";
-			sourceTree = "<group>";
-		};
-		FFDF82351814786C008B01A6 /* mac sdk */ = {
-			isa = PBXGroup;
-			children = (
-				FFDF82361814786C008B01A6 /* 基本控件 */,
-				FFDF82391814786C008B01A6 /* 字符串操作 */,
-				FFDF823C1814786C008B01A6 /* 文件操作 */,
-				FFDF823F1814786C008B01A6 /* 菜单 */,
-			);
-			name = "mac sdk";
-			path = "../../mac sdk";
-			sourceTree = "<group>";
-		};
-		FFDF82361814786C008B01A6 /* 基本控件 */ = {
-			isa = PBXGroup;
-			children = (
-				FFDF82371814786C008B01A6 /* MButton.h */,
-				FFDF82381814786C008B01A6 /* MButton.m */,
-			);
-			path = "基本控件";
-			sourceTree = "<group>";
-		};
-		FFDF82391814786C008B01A6 /* 字符串操作 */ = {
-			isa = PBXGroup;
-			children = (
-				FFDF823A1814786C008B01A6 /* MString.h */,
-				FFDF823B1814786C008B01A6 /* MString.m */,
-			);
-			path = "字符串操作";
-			sourceTree = "<group>";
-		};
-		FFDF823C1814786C008B01A6 /* 文件操作 */ = {
-			isa = PBXGroup;
-			children = (
-				FFDF823D1814786C008B01A6 /* MStringFile.h */,
-				FFDF823E1814786C008B01A6 /* MStringFile.m */,
-			);
-			path = "文件操作";
-			sourceTree = "<group>";
-		};
-		FFDF823F1814786C008B01A6 /* 菜单 */ = {
-			isa = PBXGroup;
-			children = (
-				FFDF82401814786C008B01A6 /* MMenuItem.h */,
-				FFDF82411814786C008B01A6 /* MMenuItem.m */,
-			);
-			path = "菜单";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,19 +390,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFDF82441814786C008B01A6 /* MStringFile.m in Sources */,
-				FFDF82431814786C008B01A6 /* MString.m in Sources */,
 				FF5F0328181473CF0070E345 /* AppDelegate.m in Sources */,
+				18FCF2FE18152C1A00BC0DB8 /* MMDate.m in Sources */,
 				FF5F0321181473CF0070E345 /* main.m in Sources */,
-				FFDF82451814786C008B01A6 /* MMenuItem.m in Sources */,
+				18FCF2FD18152C1A00BC0DB8 /* MMString.m in Sources */,
 				FF5F035F181474380070E345 /* GetMFile.m in Sources */,
 				FF5F035C181474380070E345 /* ZhengliM.m in Sources */,
+				18FCF2FB18152C1A00BC0DB8 /* MMStringFile.m in Sources */,
 				FF5F0360181474380070E345 /* zuzhuang.m in Sources */,
-				FFDF82421814786C008B01A6 /* MButton.m in Sources */,
 				FF5F035B181474380070E345 /* ZhengliH.m in Sources */,
 				FF5F035E181474380070E345 /* GetHeader.m in Sources */,
 				FF5F035D181474380070E345 /* ButtonView.m in Sources */,
 				FF5F035A181474380070E345 /* Zhengli.m in Sources */,
+				18FCF2FA18152C1A00BC0DB8 /* MMButton.m in Sources */,
+				18FCF2FC18152C1A00BC0DB8 /* MMenuItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

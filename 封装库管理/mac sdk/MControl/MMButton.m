@@ -1,6 +1,6 @@
  
-#import "MButton.h"
-@implementation MButton
+#import "MMButton.h"
+@implementation MMButton
 + (NSButton*)GetStringButton:(NSString *)title :(NSPoint)center :(SEL)fun :(id)father
 {
 	NSButton *button = [[NSButton alloc] init];

@@ -6,10 +6,10 @@
 //
 //
 
-#import "MStringFile.h"
-#import "MString.h"
+#import "MMStringFile.h"
+#import "MMString.h"
 
-@implementation MStringFile
+@implementation MMStringFile
 
 + (void)SaveStringToFile:(NSString *)string to:(NSString *)fileName
 {
@@ -246,7 +246,7 @@
 	for (NSString *tString in dirContents)
 	{
 		if([tString hasSuffix:@"_h"] || [tString hasSuffix:@"_m"])
-			if([MString StringHaveString:tString :str3])
+			if([MMString StringHaveString:tString :str3])
  			if(![tString isEqualToString:hPath] && ![tString isEqualToString:mPath])
 			{
        	        NSString *hPath1 = [str1 stringByAppendingString:tString];
@@ -268,8 +268,8 @@
 //	  [f removeITem\:hPath toPath:tohpath error:nil];
 	if([f fileExistsAtPath:h1] && [f fileExistsAtPath:m1])
 	{
-		bool result1 = [MStringFile SaveFileWithTimeAdd:tohpath :@"h"];
-		bool result2 = [MStringFile SaveFileWithTimeAdd:tompath :@"m"];
+		bool result1 = [MMStringFile SaveFileWithTimeAdd:tohpath :@"h"];
+		bool result2 = [MMStringFile SaveFileWithTimeAdd:tompath :@"m"];
  		if(result1 && result2)
 		{
 		    [f removeItemAtPath:tohpath error:nil];
@@ -416,7 +416,7 @@
 	for (NSString *tString in dirContents)
 	{
 		if([tString hasSuffix:@"_h"] || [tString hasSuffix:@"_m"])
-			if([MString StringHaveString:tString :str3])
+			if([MMString StringHaveString:tString :str3])
  			if(![tString isEqualToString:hPath] && ![tString isEqualToString:mPath])
 			{
        	        NSString *hPath1 = [str1 stringByAppendingString:tString];
@@ -432,7 +432,7 @@
 
 + (NSString *)ResPath:(NSString *)fileName
 {
-    NSString *path112 = [MString GetDesktopDir:[NSString stringWithFormat:@"/tool/res/%@", fileName]];
+    NSString *path112 = [MMString GetDesktopDir:[NSString stringWithFormat:@"/tool/res/%@", fileName]];
     return path112;
 }
 

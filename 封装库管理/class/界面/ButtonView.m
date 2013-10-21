@@ -1,10 +1,10 @@
  
 #import "ButtonView.h"
-#import "MStringFile.h"
+#import "MMStringFile.h"
 #import "zuzhuang.h"
-#import "MButton.h"
+#import "MMButton.h"
  #import "Zhengli.h"
-#import "MString.h"
+#import "MMString.h"
 @implementation ButtonView
 - (id)initWithFrame:(NSRect)frame
 {
@@ -46,7 +46,7 @@
 		NSRect rect = CGRectMake(0, 480 - 40, 60, 30);
 		
 		NSButton *button = [[NSButton alloc] init];
- NSImage *image =[[NSImage alloc] initWithContentsOfFile:[MStringFile ResPath:@"exit.png"]];
+ NSImage *image =[[NSImage alloc] initWithContentsOfFile:[MMStringFile ResPath:@"exit.png"]];
 		[button setImage:image];
 		[self addSubview:button];
 		[button setFrame:rect];
@@ -60,7 +60,7 @@
 		NSRect rect = CGRectMake(240, 40, 60, 30);
 		
 		NSButton *button = [[NSButton alloc] init];
- NSImage *image =[[NSImage alloc] initWithContentsOfFile:[MStringFile ResPath:@"chexiao.png"]];
+ NSImage *image =[[NSImage alloc] initWithContentsOfFile:[MMStringFile ResPath:@"chexiao.png"]];
 		[button setImage:image];
 		[self addSubview:button];
 		[button setFrame:rect];
@@ -72,7 +72,7 @@
 		NSRect rect = CGRectMake(240, 120, 60, 30);
 		
 		NSButton *button = [[NSButton alloc] init];
- NSImage *image =[[NSImage alloc] initWithContentsOfFile:[MStringFile ResPath:@"zhengli.png"]];
+ NSImage *image =[[NSImage alloc] initWithContentsOfFile:[MMStringFile ResPath:@"zhengli.png"]];
 		[button setImage:image];
 		[self addSubview:button];
 		[button setFrame:rect];
@@ -102,25 +102,25 @@
 	{
 		[buttonArray removeAllObjects];
 	}
-	NSString *path112 = [MString GetDesktopDir:@"/tool/模板"];
+	NSString *path112 = [MMString GetDesktopDir:@"/tool/模板"];
 	if([[text2 stringValue] length] < 1)
 	{
  		
  		
 		 
 		
- 	NSMutableArray *array_mu0t = [MStringFile getFileListAtPathWithHouZhui:@"txt" :path112];
+ 	NSMutableArray *array_mu0t = [MMStringFile getFileListAtPathWithHouZhui:@"txt" :path112];
 		array_mut = [array_mu0t mutableCopy];
 	}
 	else
 	{
-		NSArray *array_o = [MStringFile getFileListAtPathWithHouZhui:@"txt" :path112];
+		NSArray *array_o = [MMStringFile getFileListAtPathWithHouZhui:@"txt" :path112];
  	 VVLog(@"%d", (int)[array_o count]);
 		for(NSString *str in array_o)
 		{
  			NSString *str1 = [str lastPathComponent];
 			//
-			if([MString StringHaveString:str1 :[text2 stringValue]])
+			if([MMString StringHaveString:str1 :[text2 stringValue]])
 			{
 				VVLog(@"%@", str1);
 				//
@@ -155,7 +155,7 @@
 		NSString *str = [[array_mut objectAtIndex:i] lastPathComponent];
  str = [str substringToIndex:[str length] - 4];
 		VVLog(@"%@", str);
-		NSButton *button = [MButton GetStringButton:str :NSMakePoint(60 , 60 * (i + 1)) :@selector(JISuan3:) :self];
+		NSButton *button = [MMButton GetStringButton:str :NSMakePoint(60 , 60 * (i + 1)) :@selector(JISuan3:) :self];
 		button.tag = i;
 		[buttonArray addObject:button];
  	[self addSubview:button];
@@ -171,10 +171,10 @@
 	{
 		NSString *hPath;
 		NSString *mPath;
-		[MStringFile SetHeaderAndMFilePath:&hPath :&mPath :[text stringValue]];
+		[MMStringFile SetHeaderAndMFilePath:&hPath :&mPath :[text stringValue]];
 		
 		NSString *dir = [array_mut objectAtIndex:[sender tag]];
-		NSString *str = [MStringFile GetStringFromDir:dir];
+		NSString *str = [MMStringFile GetStringFromDir:dir];
 		
 		VVLog(@"%@, %@", hPath, mPath);
 		zuzhuang *zu = [[zuzhuang alloc] init:hPath :mPath :str];
@@ -186,13 +186,13 @@
 }
 - (void)save:(NSString *)str
 {
-	[MStringFile SaveStringToFile:str to:@"uu"];
+	[MMStringFile SaveStringToFile:str to:@"uu"];
 }
 - (void)JISuan4
 {
 	if([text stringValue] != nil && [[text stringValue] length] > 1)
 	{
-		[MStringFile BackStepNearTime:[text stringValue]];
+		[MMStringFile BackStepNearTime:[text stringValue]];
 	}
 }
 - (void)JISuan5
@@ -201,7 +201,7 @@
 	{
 		NSString *hPath;
 		NSString *mPath;
-		[MStringFile SetHeaderAndMFilePath:&hPath :&mPath :[text stringValue]];
+		[MMStringFile SetHeaderAndMFilePath:&hPath :&mPath :[text stringValue]];
 		Zhengli *zheng = [[Zhengli alloc] init:hPath :mPath];
 		[zheng Export];
 			

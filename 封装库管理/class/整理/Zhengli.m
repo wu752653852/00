@@ -1,8 +1,10 @@
  
 #import "Zhengli.h"
-#import "MStringFile.h"
 #import "ZhengliH.h"
 #import "ZhengliM.h"
+#import "MMDate.h"
+#import "MMStringFile.h"
+
 @implementation Zhengli
 - (id)init:(NSString *)hPath1 :(NSString *)mPath1
 {
@@ -27,34 +29,37 @@
 }
 - (void)load
 {
-	ToHFile = [MStringFile GetStringFromDir:hPath];
-	ToMFile = [MStringFile GetStringFromDir:mPath];
+	ToHFile = [MMStringFile GetStringFromDir:hPath];
+	ToMFile = [MMStringFile GetStringFromDir:mPath];
 }
 - (void)ExportLian
 {
 	[self Zhengli];
-	[MStringFile SaveStringToDir:ToHFile to:hPath];
-	[MStringFile SaveStringToDir:ToMFile to:mPath];
+	[MMStringFile SaveStringToDir:ToHFile to:hPath];
+	[MMStringFile SaveStringToDir:ToMFile to:mPath];
 }
 - (void)Export
 {
 	[self Zhengli];
-	bool result1 = [MStringFile SaveFileWithTimeAdd:hPath :@"h"];
-	bool result2 = [MStringFile SaveFileWithTimeAdd:mPath :@"m"];
-	[MStringFile removeNotNewAtPath:hPath];
+	bool result1 = [MMStringFile SaveFileWithTimeAdd:hPath :@"h"];
+	bool result2 = [MMStringFile SaveFileWithTimeAdd:mPath :@"m"];
+	[MMStringFile removeNotNewAtPath:hPath];
 	if(result1 && result2)
 	{
- 		[MStringFile SaveStringToDir:ToHFile to:hPath];
- 		[MStringFile SaveStringToDir:ToMFile to:mPath];
+ 		[MMStringFile SaveStringToDir:ToHFile to:hPath];
+ 		[MMStringFile SaveStringToDir:ToMFile to:mPath];
 	}
 }
 - (void)Zhengli
 {
+	MMDate *m = [[MMDate alloc] init];
+	NSString *ti = [NSString stringWithFormat:@"_%d_%d_%d", m.hour,m.minute,m.second];
 	
- ZhengliH *h = [[ZhengliH alloc] init:ToHFile];
+	
+	ZhengliH *h = [[ZhengliH alloc] init:ToHFile :ti];
 	ToHFile = [h GetH];
 	
-	ZhengliM *m = [[ZhengliM alloc] init:ToMFile];
-	ToMFile = [m GetM];
+	ZhengliM *m1 = [[ZhengliM alloc] init:ToMFile :ti];
+	ToMFile = [m1 GetM];
 }
 @end

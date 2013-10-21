@@ -1,6 +1,11 @@
  
 #import "GetHeader.h"
-#import "MString.h"
+#import "MMString.h"
+//#import "MDate.h"
+#import "MMDate.h"
+
+//#import "MDate.h"
+
  @implementation GetHeader
 - (id)init:(NSString *)str :(NSString *)str1;
 {
@@ -8,6 +13,7 @@
 	{
 		ToHFile = [NSMutableString stringWithString:str];
 		file = str1;
+
 	}
 	return self;
 }
@@ -25,20 +31,20 @@
 }
 - (NSInteger)GetHeaderPos
 {
-	NSInteger a = [MString GetBeforeKeyNum:ToHFile :@"#import"];
+	NSInteger a = [MMString GetBeforeKeyNum:ToHFile :@"#import"];
  return a;
 }
 - (void)AddHeader
 {
-	NSString *header = [MString GetStringFrom:file :@"~header" :@"~before_func"];
+	NSString *header = [MMString GetStringFrom:file :@"~header" :@"~before_func"];
 	header = [@"\n" stringByAppendingString:header];
 	NSInteger ina = [self GetHeaderPos];
 	[ToHFile insertString:header atIndex:ina];
 }
 -(NSInteger)GetAddHeaderFuncPos
 {
- NSInteger a1 = [MString GetBeforeKeyNum:ToHFile :@"@interface"];
-	NSInteger b1 = [MString GetBeforeKeyNum:ToHFile :@"@protocol"];
+ NSInteger a1 = [MMString GetBeforeKeyNum:ToHFile :@"@interface"];
+	NSInteger b1 = [MMString GetBeforeKeyNum:ToHFile :@"@protocol"];
 	VVLog(@"%d", (int)a1);
 	VVLog(@"%d", (int)b1);
 	if(a1 == -1 && b1 != -1)
@@ -61,7 +67,7 @@
 }
 - (void)AddHeaderFunc
 {
-	NSString *header = [MString GetStringFrom:file :@"~before_func" :@"~func_delegate"];
+	NSString *header = [MMString GetStringFrom:file :@"~before_func" :@"~func_delegate"];
 	header = [@"\n" stringByAppendingString:header];
 	NSInteger ina = [self GetAddHeaderFuncPos];
 	
@@ -71,39 +77,39 @@
 }
 - (void)AddDelegate
 {
-	NSString *header = [MString GetStringFrom:file :@"~func_delegate" :@"~in_func"];
+	NSString *header = [MMString GetStringFrom:file :@"~func_delegate" :@"~in_func"];
 	
-	header = [MString RemoveEndString:header :@" "];
-	header = [MString RemoveEndString:header :@"\n"];
+	header = [MMString RemoveEndString:header :@" "];
+	header = [MMString RemoveEndString:header :@"\n"];
 	header = [@"\n" stringByAppendingString:header];
  		
  	VVLog(@"%@", ToHFile);
-	NSString *str = [MString GetStringFrom:ToHFile :@"@interface" :@"@end"];
+	NSString *str = [MMString GetStringFrom:ToHFile :@"@interface" :@"@end"];
  	
-	NSString *str3 = [MString GetStringFrom:str :@"<" :@">"];
+	NSString *str3 = [MMString GetStringFrom:str :@"<" :@">"];
 	NSInteger in2 ;
 	if(str3 != nil)
 	{
-	 in2 = [MString GetInCludeBeforKeyNum:ToHFile :str3];
+	 in2 = [MMString GetInCludeBeforKeyNum:ToHFile :str3];
 		header = [@",\n" stringByAppendingString:header];
  		[ToHFile insertString:header atIndex:in2];
 	}
 	else
 	{
-		NSString *str5 = [MString GetStringFrom:ToHFile :@"@interface" :@"{"];
+		NSString *str5 = [MMString GetStringFrom:ToHFile :@"@interface" :@"{"];
 		if(str5 != nil)
 		{
-			in2 = [MString GetInCludeBeforKeyNum:ToHFile :str5];
+			in2 = [MMString GetInCludeBeforKeyNum:ToHFile :str5];
 			header = [@"<" stringByAppendingFormat:@"%@>", header];
 			
 			[ToHFile insertString:header atIndex:in2];
 		}
 		else
 		{
-			NSString *str6 = [MString GetStringFrom:ToHFile :@"@interface" :@"@end"];
+			NSString *str6 = [MMString GetStringFrom:ToHFile :@"@interface" :@"@end"];
 			if(str6 != nil)
 			{
-				in2 = [MString GetInCludeBeforKeyNum:ToHFile :str6];
+				in2 = [MMString GetInCludeBeforKeyNum:ToHFile :str6];
 				header = [@"<" stringByAppendingFormat:@"%@>", header];
 				[ToHFile insertString:header atIndex:in2];
 			}
@@ -112,40 +118,37 @@
 }
 - (void)AddFunc
 {
-	NSString *header = [MString GetStringFrom:file :@"~in_func" :@"~.m"];
+	NSString *header = [MMString GetStringFrom:file :@"~in_func" :@"~.m"];
 	
-	NSString *str = [MString GetStringFrom:ToHFile :@"@interface" :@"@end"];
-	NSString *str3 = [MString GetStringFrom:str :@"{" :@"}"];
+	NSString *str = [MMString GetStringFrom:ToHFile :@"@interface" :@"@end"];
+	NSString *str3 = [MMString GetStringFrom:str :@"{" :@"}"];
 	NSInteger in2;
 	
 	if(str3 != nil)
 	{
-	 in2 = [MString GetInCludeBeforKeyNum:ToHFile :str3];
+	 in2 = [MMString GetInCludeBeforKeyNum:ToHFile :str3];
 		header = [@"\n" stringByAppendingString:header];
 		[ToHFile insertString:header atIndex:in2];
 	}
 	else
 	{
-		NSString *str4 = [MString GetStringFrom:str :@">" :@"@end"];
+		NSString *str4 = [MMString GetStringFrom:str :@">" :@"@end"];
 		if(str4 != nil)
 		{
-	 	in2 = [MString GetInCludeBeforKeyNum:ToHFile :str4];
+	 	in2 = [MMString GetInCludeBeforKeyNum:ToHFile :str4];
 			header = [@"\n{\n" stringByAppendingFormat:@"%@\n}\n" ,header];
 			[ToHFile insertString:header atIndex:in2];
 		}
 		else
 		{
-			NSString *str5 = [MString GetStringFrom:ToHFile :@"@interface" :@"@end"];
+			NSString *str5 = [MMString GetStringFrom:ToHFile :@"@interface" :@"@end"];
 			if(str5 != nil)
 			{
-				in2 = [MString GetInCludeBeforKeyNum:ToHFile :str5];
+				in2 = [MMString GetInCludeBeforKeyNum:ToHFile :str5];
 				header = [@"\n{\n" stringByAppendingFormat:@"%@\n}\n" ,header];
 				[ToHFile insertString:header atIndex:in2];
 			}
 		}
-		
-		
 	}
-	
 }
 @end

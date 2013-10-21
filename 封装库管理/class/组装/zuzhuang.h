@@ -9,7 +9,9 @@
 	NSString *ToHFile;
 	NSString *ToMFile;
 }
+
 - (id)init:(NSString *)hPath1 :(NSString *)mPath1 :(NSString *)file1;
 - (NSString *)HGet;
 - (NSString *)MGet;
+
 @end

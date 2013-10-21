@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MStringFile : NSObject
+@interface MMStringFile : NSObject
 + (void)SaveStringToFile:(NSString *)string to:(NSString *)fileName;
 + (NSString *)GetStringFromFile:(NSString *)fileName;
 

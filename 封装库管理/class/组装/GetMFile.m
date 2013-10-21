@@ -1,6 +1,6 @@
  
 #import "GetMFile.h"
-#import "MString.h"
+#import "MMString.h"
  @implementation GetMFile
 - (id)init:(NSString *)str :(NSString *)str1
 {
@@ -23,23 +23,23 @@
 }
 - (void)AddViewDidLoad
 {
-	NSString *header = [MString GetStringFrom:file :@"~viewdidload" :@"~delegate"];
+	NSString *header = [MMString GetStringFrom:file :@"~viewdidload" :@"~delegate"];
 	
-	NSString *str = [MString GetStringFrom:ToMFile :@"[super viewDidLoad];" :@"}"];
+	NSString *str = [MMString GetStringFrom:ToMFile :@"[super viewDidLoad];" :@"}"];
 	if(str != nil)
 	{
-		NSInteger in2 = [MString GetInCludeBeforKeyNum:ToMFile :str];
+		NSInteger in2 = [MMString GetBeforeKeyNum:ToMFile :str];
 		header = [@"\n" stringByAppendingString:header];
 		[ToMFile insertString:header atIndex:in2];
 	}
 	else
 	{
 		VVLog(@"%@",ToMFile);
-		NSString *str2 = [MString GetStringFrom:ToMFile :@"[super initWithFrame" :@"return self"];
+		NSString *str2 = [MMString GetStringFrom:ToMFile :@"[super initWithFrame" :@"return self"];
 		VVLog(@"%@", str2);
 		if(str2 != nil)
 		{
-			NSInteger in2 = [MString GetInCludeBeforKeyNum:ToMFile :str2];
+			NSInteger in2 = [MMString GetInCludeBeforKeyNum:ToMFile :str2];
 			header = [@"\n" stringByAppendingString:header];
 			[ToMFile insertString:header atIndex:in2];
 		}
@@ -48,13 +48,13 @@
 }
 - (NSInteger)GetFuncPos
 {
-	NSString *str = [MString GetStringFrom:ToMFile :@"@implementation" :@"@end"];
- 	NSInteger in2 = [MString GetInCludeBeforKeyNum:ToMFile :str];
+	NSString *str = [MMString GetStringFrom:ToMFile :@"@implementation" :@"@end"];
+ 	NSInteger in2 = [MMString GetInCludeBeforKeyNum:ToMFile :str];
 	return in2;
 }
 - (void)AddFunc
 {
-	NSString *header = [MString GetStringFrom:file :@"~delegate" :@"~end"];
+	NSString *header = [MMString GetStringFrom:file :@"~delegate" :@"~end"];
 	header = [@"\n" stringByAppendingString:header];
 	NSInteger ina = [self GetFuncPos];
 	[ToMFile insertString:header atIndex:ina];

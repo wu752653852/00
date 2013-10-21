@@ -45,14 +45,13 @@
 
 
 - (void) applicationDidFinishLaunching: (NSNotification*) noti {
-     [MMenuItem SetMenu:@"cao ni ma" :@"Edit" :@selector(wocao) :self];
+     [MMenuItem SetMenu:@"contribute duction" :@"Edit" :@selector(wocao) :self];
 
  }
 
 - (void)wocao
 {
-    NSLog(@"cao dao le");
-    if(buttonWindow == nil)
+     if(buttonWindow == nil)
     {
         buttonWindow = [[ButtonWindowController alloc] init];
         [buttonWindow showWindow:buttonWindow];

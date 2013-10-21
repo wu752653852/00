@@ -1,6 +1,6 @@
  
 #import "zuzhuang.h"
-#import "MStringFile.h"
+#import "MMStringFile.h"
 #import "GetHeader.h"
 #import "GetMFile.h"
  @implementation zuzhuang
@@ -21,12 +21,12 @@
 }
 - (void)load
 {
-	ToHFile = [MStringFile GetStringFromDir:hPath];
-	ToMFile = [MStringFile GetStringFromDir:mPath];
+	ToHFile = [MMStringFile GetStringFromDir:hPath];
+	ToMFile = [MMStringFile GetStringFromDir:mPath];
 	
-	[MStringFile SaveFileWithTimeAdd:hPath :@"h"];
-	[MStringFile SaveFileWithTimeAdd:mPath :@"m"];
-	[MStringFile removeNotNewAtPath:hPath];
+	[MMStringFile SaveFileWithTimeAdd:hPath :@"h"];
+	[MMStringFile SaveFileWithTimeAdd:mPath :@"m"];
+	[MMStringFile removeNotNewAtPath:hPath];
 	
 	
 }
@@ -44,6 +44,8 @@
 }
 - (void)GetInSert
 {
+
+	
  	GetHeader *he = [[GetHeader alloc] init:ToHFile :file];
 	ToHFile = [he GetH];
 	VVLog(@"%@", ToHFile);

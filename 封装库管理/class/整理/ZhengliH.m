@@ -1,13 +1,15 @@
  
 #import "ZhengliH.h"
-#import "MStringFile.h"
+#import "MMStringFile.h"
+#import "MMString.h"
  @implementation ZhengliH
-- (id)init:(NSString *)str
+- (id)init:(NSString *)str :(NSString *)time1
 {
 	if(self = [super init])
 	{
 		ToHFile = str;
-		//
+		time = time1;
+
  	}
 	return self;
 }
@@ -21,6 +23,7 @@
 	[self quchu_huiche];
 	[self quchu_zhushi];
 	[self quchu_huiche];
+	[self AddTimeEqual];
 }
 - (void)quchu_huiche
 {
@@ -81,4 +84,27 @@
 		}
 	}
 }
+
+
+- (void)AddTimeEqual
+{
+	NSArray *arr = [ToHFile componentsSeparatedByString:@"***"];
+	
+	
+ 	NSString *Tofile = @"";
+ 
+    for(int i  =0;i < [arr count]; i ++)
+	{
+		NSString *str  = [arr objectAtIndex:i];
+		NSInteger aa = [MMString GetInCludeBeforKeyNum:ToHFile :str];
+		if([MMString StringEndRightIsString:ToHFile :aa :@"***"] && i != [arr count] - 1)
+		{
+  			str = [str stringByAppendingString:time];
+		}
+ 		Tofile = [Tofile stringByAppendingString:str];
+
+	}
+	ToHFile = Tofile;
+}
+
 @end
